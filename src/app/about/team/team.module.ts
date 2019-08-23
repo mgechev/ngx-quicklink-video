@@ -1,23 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AboutComponent } from './about.component';
+import { TeamComponent } from './team.component';
 import { RouterModule } from '@angular/router';
 
 @NgModule({
-  declarations: [AboutComponent],
+  declarations: [TeamComponent],
   imports: [
     RouterModule.forChild([
       {
         path: '',
         pathMatch: 'full',
-        component: AboutComponent
-      },
-      {
-        path: 'team',
-        loadChildren: () => import('./team/team.module').then(m => m.TeamModule)
+        component: TeamComponent
       }
     ]),
     CommonModule
   ]
 })
-export class AboutModule { }
+export class TeamModule { }
